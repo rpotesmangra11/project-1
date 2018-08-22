@@ -1,5 +1,5 @@
 $(document).ready( ()=> {
-    console.log("ready")
+    console.log("not ready")
     var config = {
         apiKey: "AIzaSyCe6RdQ713wNfR_pyx9yFVpRp82_YehtOs",
         authDomain: "project-1-f279d.firebaseapp.com",
