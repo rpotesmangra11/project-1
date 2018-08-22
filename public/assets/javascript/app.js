@@ -1,4 +1,4 @@
-$(document).ready( ()=> {
+$(document).ready(() => {
     console.log("ready")
     var config = {
         apiKey: "AIzaSyCe6RdQ713wNfR_pyx9yFVpRp82_YehtOs",
@@ -7,18 +7,21 @@ $(document).ready( ()=> {
         projectId: "project-1-f279d",
         storageBucket: "project-1-f279d.appspot.com",
         messagingSenderId: "840313509707"
-      };
-      firebase.initializeApp(config);
+    };
+    firebase.initializeApp(config);
 });
 
-$("#add-file").on("click", function(event) {
-    event.preventDefault();
+$(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
 
-    var face = $("#file-input").val();
-    
-    $.ajax({
-        url:'upload.php',
-        type: 'POST',   
-         
-    })
-})
+function imageIsLoaded(e) {
+    $('#user1-face').attr('src', e.target.result);
+    console.log(e.target.result)
+};
