@@ -18,8 +18,7 @@ $("#add-file").on("click", function(event) {
     
     $.ajax({
         url:'upload.php',
-        type: 'POST',
-
-        
+        type: 'POST',   
+         
     })
 })
