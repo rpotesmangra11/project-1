@@ -9,5 +9,16 @@ $(document).ready( ()=> {
         messagingSenderId: "840313509707"
       };
       firebase.initializeApp(config);
-      
 });
+
+$("#add-file").on("click", function(event) {
+    event.preventDefault();
+
+    var face = $("#file-input").val();
+    
+    $.ajax({
+        url:'upload.php',
+        type: 'POST',   
+         
+    })
+})
