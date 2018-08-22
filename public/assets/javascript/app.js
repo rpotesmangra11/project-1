@@ -9,7 +9,6 @@ $(document).ready( ()=> {
         messagingSenderId: "840313509707"
       };
       firebase.initializeApp(config);
-      
 });
 
 $("#add-file").on("click", function(event) {
