@@ -9,4 +9,3 @@ after_success:
  — firebase deploy — project project-1-f279d
  — token $FIREBASE_TOKEN.
 
-token 1/VXJvyDZUeRB2bGR9SeIiZ73-CI44OFrjeh2DJo95Wgc
