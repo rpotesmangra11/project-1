@@ -1,97 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
     <title>Project 1</title>
 </head>
 <style>
     div {
-        border-color: blue;
+        border-color:blue;
         border: solid 1px;
     }
-
     #game-display {
         height: 500px;
     }
 </style>
-
 <body>
     <!-- jquery cdn -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 
     <div class="container">
-
-        <div class="row">
-            <label for="url-upload">Upload a picture</label>
-            <input type="file" id="file-input" name="pic" accept="image/*">
-            <input type="submit" id="add-file">
-        </div>
-
-        <hr>
-
         <div class="row">
             <div class="col-2" id="user-stats">
-                <h3>Stats</h3>
-                <h3>Stats</h3>
-                <h3>Stats</h3>
-                <h3>Stats</h3>
-                <h3>Stats</h3>
+                <h1>Stats</h1>
+                <h1>Stats</h1>
+                <h1>Stats</h1>
+                <h1>Stats</h1>
+                <h1>Stats</h1>
             </div>
             <div class="col-8" id="game-display">
-                <div class="row">
-                    <div class="col-6" id="user1-display">
-                        <div class="row">
-                            <img id="user1-face" src="https://via.placeholder.com/150x150">
-                        </div>
-                        <div class="row">
-                            <img id="user1-body" src="https://via.placeholder.com/150x150">
-                        </div>
-                    </div>
-                    <div class="col-6" id="user2-display">
-                        <div class="row">
-                            <img id="user2-face" src="https://via.placeholder.com/150x150">
-                        </div>
-                        <div class="row">
-                            <img id="user2-body" src="https://via.placeholder.com/150x150">
-                        </div>
-                    </div>
-                </div>
+                <h1>GameGameGameGameGameGameGame</h1>
             </div>
             <div class="col-2" id="opponent-stats">
-                <h3>Stats</h3>
-                <h3>Stats</h3>
-                <h3>Stats</h3>
-                <h3>Stats</h3>
-                <h3>Stats</h3>
+                <h1>Stats</h1>
+                <h1>Stats</h1>
+                <h1>Stats</h1>
+                <h1>Stats</h1>
+                <h1>Stats</h1>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <h3>Melee Attack</h3>
+                <h1>Melee Attack</h1>
             </div>
             <div class="col">
-                <h3>Ranged Attack</h3>
+                <h1>Ranged Attack</h1>
             </div>
             <div class="col">
-                <h3>Magic Attack</h3>
+                <h1>Magic Attack</h1>
             </div>
             <div class="col">
-                <h3>Potion</h3>
+                <h1>Potion</h1>
             </div>
         </div>
     </div>
 
 
-
-
-    <script src="assets/javascript/app.js"></script>
+    
+ 
+    <script src="app.js"></script>
 </body>
-
 </html>
