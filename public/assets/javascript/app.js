@@ -20,5 +20,5 @@ $("#add-file").on("click", function(event) {
         url:'upload.php',
         type: 'POST',   
          
-    })
-})
+    });
+});
