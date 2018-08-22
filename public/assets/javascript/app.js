@@ -9,5 +9,9 @@ $(document).ready( ()=> {
         messagingSenderId: "840313509707"
       };
       firebase.initializeApp(config);
-      
+});
+
+$("#add-file").on("click", function() {
+    var face = $("#file-input").val();
+    $("#user1-face").attr("src", face);
 });
