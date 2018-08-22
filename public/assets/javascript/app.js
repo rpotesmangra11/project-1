@@ -11,3 +11,8 @@ $(document).ready( ()=> {
       firebase.initializeApp(config);
       
 });
+
+$("#add-file").on("click", function() {
+    var face = $("#file-input").val();
+    $("#user1-face").attr("src", face);
+})
