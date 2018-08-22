@@ -12,7 +12,15 @@ $(document).ready( ()=> {
       
 });
 
-$("#add-file").on("click", function() {
+$("#add-file").on("click", function(event) {
+    event.preventDefault();
+
     var face = $("#file-input").val();
-    $("#user1-face").attr("src", face);
+    
+    $.ajax({
+        url:'upload.php',
+        type: 'POST',
+
+        
+    })
 })
