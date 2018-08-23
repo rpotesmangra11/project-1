@@ -1,5 +1,5 @@
 $(document).ready( ()=> {
-    console.log("not ready")
+    console.log("ready")
     var config = {
         apiKey: "AIzaSyCe6RdQ713wNfR_pyx9yFVpRp82_YehtOs",
         authDomain: "project-1-f279d.firebaseapp.com",
@@ -7,9 +7,9 @@ $(document).ready( ()=> {
         projectId: "project-1-f279d",
         storageBucket: "project-1-f279d.appspot.com",
         messagingSenderId: "840313509707"
-    };
-    firebase.initializeApp(config);
-});
+      };
+      firebase.initializeApp(config);
+
 
 $(function () {
     $(":file").change(function () {
@@ -25,3 +25,4 @@ function imageIsLoaded(e) {
     $('#user1-face').attr('src', e.target.result);
     console.log(e.target.result)
 };
+});
