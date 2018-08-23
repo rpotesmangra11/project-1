@@ -1,4 +1,4 @@
-$(document).ready( ()=> {
+$(document).ready(() => {
     console.log("ready")
     var config = {
         apiKey: "AIzaSyCe6RdQ713wNfR_pyx9yFVpRp82_YehtOs",
@@ -9,10 +9,21 @@ $(document).ready( ()=> {
         messagingSenderId: "840313509707"
       };
       firebase.initializeApp(config);
+$(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
 
 
-$("#add-file").on("click", function(event) {
-    event.preventDefault();
+function imageIsLoaded(e) {
+    $('#user1-face').attr('src', e.target.result);
+    console.log(e.target.result)
+};
 
     var face = $("#file-input").val();
     
@@ -23,3 +34,4 @@ $("#add-file").on("click", function(event) {
     });
 });
 });
+
