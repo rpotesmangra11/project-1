@@ -7,11 +7,9 @@ $(document).ready(() => {
         projectId: "project-1-f279d",
         storageBucket: "project-1-f279d.appspot.com",
         messagingSenderId: "840313509707"
-    };
-    firebase.initializeApp(config);
-});
 
-//Image Upload functions
+      firebase.initializeApp(config);
+
 $(function () {
     $(":file").change(function () {
         if (this.files && this.files[0]) {
@@ -21,6 +19,7 @@ $(function () {
         }
     });
 });
+
 function imageIsLoaded(e) {
     var imgdataURL = e.target.result;
     $('#user1-face').attr('src', imgdataURL);
@@ -99,5 +98,13 @@ function imageIsLoaded(e) {
     };
 };
 
+    var face = $("#file-input").val();
+    
+    $.ajax({
+        url:'upload.php',
+        type: 'POST',   
+         
+    });
+});
 
 
