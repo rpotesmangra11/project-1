@@ -1,0 +1,30 @@
+.game-grid {
+    border: solid 1px deeppink;
+}
+
+#game-display {
+    height: 500px;
+}
+
+#user1-face,
+#user1-face {
+    height: 150px;
+    width: 150px;
+}
+
+.btn:hover {
+    color: blueviolet !important;
+}
+
+body {
+    background-image: url(https://media.giphy.com/media/ZohjjXBFXojxC/source.gif);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: darkseagreen;
+}
+
+h1 {
+    background-color: blueviolet;
+}
