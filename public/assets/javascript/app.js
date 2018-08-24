@@ -33,5 +33,4 @@ function imageIsLoaded(e) {
          
     });
 });
-});
 
