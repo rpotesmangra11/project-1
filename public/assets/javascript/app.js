@@ -7,7 +7,7 @@ $(document).ready(() => {
         projectId: "project-1-f279d",
         storageBucket: "project-1-f279d.appspot.com",
         messagingSenderId: "840313509707"
-
+    }
       firebase.initializeApp(config);
 
 $(function () {
