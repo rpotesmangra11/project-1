@@ -31,10 +31,16 @@ function imageIsLoaded(e) {
     function processImage() {
         var subscriptionKey = "06fb82297d134fde9722b84fab719531";
         var uriBase =
-        "https://westcentralus.api.cognitive.microsoft.com/face/v1.0";
+            "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect";
 
         // Request parameters.
-        var params = {};
+        var params = {
+            "returnFaceId": "true",
+            "returnFaceLandmarks": "false",
+            "returnFaceAttributes":
+                "age,gender,headPose,smile,facialHair,glasses,emotion," +
+                "hair,makeup,occlusion,accessories,blur,exposure,noise"
+        };
 
         //Make Blob for Ajax call
         makeblob = function (dataURL) {
