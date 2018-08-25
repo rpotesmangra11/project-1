@@ -1,21 +1,42 @@
-.game-grid {
-    border: solid 1px deeppink;
+body {
+    background-color: whitesmoke;
+}
+
+.container {
+    background-color: white;
 }
 
 #game-display {
-    height: 500px;
+    background-color: #e9ecef;
+    min-height: 400px;
+    margin-bottom: 30px;
 }
 
-#user1-face,
-#user1-face {
-    height: 150px;
-    width: 150px;
+.jumbotron {
+    padding: 8px 15px;
+    text-align: center;
 }
 
-.btn:hover {
-    color: blueviolet !important;
+.profile-img {
+    padding-right: 0px;
+    margin-right: 0px;;
 }
 
+.char-stats {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.card {
+    height: 240px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
 body {
     background-image: url(https://media.giphy.com/media/ZohjjXBFXojxC/source.gif);
     -webkit-background-size: cover;
@@ -23,8 +44,4 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-color: darkseagreen;
-}
-
-h1 {
-    background-color: blueviolet;
-}
+} */
