@@ -1,21 +1,70 @@
-.game-grid {
-    border: solid 1px deeppink;
+body {
+  background-image: url(../images/darkness.png);
+}
+
+.container {
+  background-image: url(../images/darkness.png);
 }
 
 #game-display {
-    height: 500px;
+  background-color: #e9ecef;
+  min-height: 400px;
+  margin-bottom: 30px;
+
+  background-image: url(https://media.giphy.com/media/ZohjjXBFXojxC/source.gif);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#user1-face,
-#user1-face {
-    height: 150px;
-    width: 150px;
+.jumbotron {
+  padding: 8px 15px;
+  text-align: center;
+
 }
 
-.btn:hover {
-    color: blueviolet !important;
+.atkButtons {
+  margin-bottom: 30px;
 }
 
+.bgJumboImg {
+    background-image: url(../images/banner-img.png);
+
+    /* Full height */
+    /* height: 50%;
+    width: 50%; */
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-img {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.char-stats {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.card {
+  height: 240px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
 body {
     background-image: url(https://media.giphy.com/media/ZohjjXBFXojxC/source.gif);
     -webkit-background-size: cover;
@@ -23,8 +72,4 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-color: darkseagreen;
-}
-
-h1 {
-    background-color: blueviolet;
-}
+} */
