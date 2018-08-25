@@ -150,16 +150,16 @@ $(document).ready(() => {
 
                     //display stats
                     var hpdiv = $("<h3>");
-                    hpdiv.text("Health: " + health);
-                    $("#user-stats").append(hpdiv);
+                    hpdiv.text(health);
+                    $("#health").html(hpdiv);
 
                     var attdiv = $("<h3>");
-                    attdiv.text("Attack: " + att);
-                    $("#user-stats").append(attdiv);
+                    attdiv.text(att);
+                    $("#attack").html(attdiv);
 
                     var defdiv = $("<h3>");
-                    defdiv.text("Defence: " + def);
-                    $("#user-stats").append(defdiv);
+                    defdiv.text(def);
+                    $("#defense").html(defdiv);
 
                 })
 
