@@ -72,4 +72,14 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-color: darkseagreen;
-} */
+
+}
+
+h1 {
+    background-color: blueviolet;
+}
+
+h3 {
+    background-color: blueviolet;
+}
+
