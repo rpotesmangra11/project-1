@@ -1,39 +1,67 @@
 body {
-    background-color: whitesmoke;
+  background-image: url(../images/darkness.png);
 }
 
 .container {
-    background-color: white;
+  background-image: url(../images/darkness.png);
 }
 
 #game-display {
-    background-color: #e9ecef;
-    min-height: 400px;
-    margin-bottom: 30px;
+  background-color: #e9ecef;
+  min-height: 400px;
+  margin-bottom: 30px;
+
+  background-image: url(https://media.giphy.com/media/ZohjjXBFXojxC/source.gif);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .jumbotron {
-    padding: 8px 15px;
-    text-align: center;
+  padding: 8px 15px;
+  text-align: center;
+
+}
+
+.atkButtons {
+  margin-bottom: 30px;
+}
+
+.bgJumboImg {
+    background-image: url(../images/banner-img.png);
+
+    /* Full height */
+    /* height: 50%;
+    width: 50%; */
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .profile-img {
-    padding-right: 0px;
-    margin-right: 0px;;
+  padding-right: 0px;
+  margin-right: 0px;
 }
 
 .char-stats {
-    margin-left: 0px;
-    padding-left: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
 }
 
 .card {
-    height: 240px;
+  height: 240px;
 }
 
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* 
