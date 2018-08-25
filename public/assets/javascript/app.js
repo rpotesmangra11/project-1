@@ -173,6 +173,8 @@ $(document).ready(() => {
                             jQuery.parseJSON(jqXHR.responseText).error.message;
                     alert(errorString);
                 });
+
+                
         };
     };
 });
