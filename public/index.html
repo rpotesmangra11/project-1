@@ -22,6 +22,22 @@
         <!-- Game Title Banner -->
         <div class="jumbotron">
             <h1 class="display-4">Face Wars</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content
+                or information.</p>
+            <hr class="my-4">
+        </div>
+
+        <!-- Game Content Area -->
+        <div class="row">
+            <div class="col-12" id="game-display">
+            </div>
+        </div>
+
+        <!-- Attack Buttons -->
+        <div class="row atkButtons">
+            <div class="col-sm">
+                <button type="button" class="btn btn-lg btn-block btn-success">Melee Attack</button>
+
             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
                 featured content or information.</p>
             <hr class="my-4">
@@ -36,33 +52,57 @@
                 <h3>Defense</h3>
                 <h3 id="defense"></h3>
             </div>
-            <div class="col-8 game-grid" id="game-display">
-                <div class="row">
-                    <div class="col-md-5 game-grid">
-                        <div class="row game-grid">
-                            <img id="user1-face" src="https://via.placeholder.com/150x150">
-                        </div>
-                        <div class="row game-grid" id="user1-body">
-                            <img src="https://via.placeholder.com/150x150">
-                        </div>
-                    </div>
-                    <div class="col-5 game-grid">
-                        <div class="row game-grid" id="user2-face">
-                            <img src="https://via.placeholder.com/150x150">
-                        </div>
-                        <div class="row game-grid" id="user2-body">
-                            <img src="https://via.placeholder.com/150x150">
-                        </div>
+            <div class="col">
+                <button type="button" class="btn btn-lg btn-block btn-primary">Heal</button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-lg btn-block btn-success">Melee Attack</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-lg btn-block btn-primary">Heal</button>
+            </div>
+        </div>
+
+        <!-- Player 1 -->
+        <div class="row">
+            <div class="col profile-img">
+                <img class="rounded float-right" src="https://placeimg.com/240/240/people">
+            </div>
+            <div class="col char-stats">
+                <div class="card text-white bg-dark mb-3 rounded" style="max-width: 18rem;">
+                    <div class="card-header">Hero Face 1</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Character Stats</h5>
+                        <p class="card-text">
+                            Health:
+                            <h3 id="health"></h3>
+                        </p>
+                        <p class="card-text">
+                            Attack:
+                            <h3 id="attack"></h3>
+                        </p>
+                        <p class="card-text">
+                            Defense:
+                            <h3 id="defense"></h3>
+                        </p>
+                        <p class="card-text">
+                            Potions:
+                        </p>
                     </div>
                 </div>
             </div>
+
+            <!-- Player 2 -->
+            <div class="col profile-img">
+                <img class="rounded float-right" src="https://placeimg.com/240/240/people">
+            </div>
+
             <div class="col-2 game-grid" id="opponent-stats">
                 <h1>Stats</h1>
                 <h1>Stats</h1>
                 <h1>Stats</h1>
                 <h1>Stats</h1>
                 <h1>Stats</h1>
-=======
 
         <!-- Game Content Area -->
         <div class="row">
@@ -135,8 +175,9 @@
         </footer>
     </div>
 
+        <script src="assets/javascript/app.js"></script> =======
+        <script src="app.js"></script> >>>>>>> f02308644aea6ae9be1f5201252e0bffd64ead45
 
-    <script src="app.js"></script>
 </body>
 
 </html>
