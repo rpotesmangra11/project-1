@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -10,18 +11,9 @@
     <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
     <title>Project 1</title>
 </head>
-<style>
-    div {
-        border-color: blue;
-        border: solid 1px;
-    }
-
-    #game-display {
-        height: 500px;
-    }
-</style>
 
 <body>
+       
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
@@ -29,11 +21,11 @@
     <div class="container">
 
         <div class="row">
-            <form>
+            <form class="btn btn-light">
                 <input type="file" id="file-input">
             </form>
         </div>
-        <div class="row">
+        <div class="row game-grid">
             <div class="col-2" id="user-stats">
                 <h1>Stats</h1>
                 <h1>Stats</h1>
@@ -41,27 +33,27 @@
                 <h1>Stats</h1>
                 <h1>Stats</h1>
             </div>
-            <div class="col-8" id="game-display">
+            <div class="col-8 game-grid" id="game-display">
                 <div class="row">
-                    <div class="col-5">
-                        <div class="row">
-                                <img id="user1-face" src="https://via.placeholder.com/150x150">
-                            </div>
-                        <div class="row" id="user1-body">
+                    <div class="col-md-5 game-grid">
+                        <div class="row game-grid">
+                            <img id="user1-face" src="https://via.placeholder.com/150x150">
+                        </div>
+                        <div class="row game-grid" id="user1-body">
                             <img src="https://via.placeholder.com/150x150">
                         </div>
                     </div>
-                    <div class="col-5">
-                        <div class="row" id="user2-face">
+                    <div class="col-5 game-grid">
+                        <div class="row game-grid" id="user2-face">
                             <img src="https://via.placeholder.com/150x150">
                         </div>
-                        <div class="row" id="user2-body">
+                        <div class="row game-grid" id="user2-body">
                             <img src="https://via.placeholder.com/150x150">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-2" id="opponent-stats">
+            <div class="col-2 game-grid" id="opponent-stats">
                 <h1>Stats</h1>
                 <h1>Stats</h1>
                 <h1>Stats</h1>
@@ -70,17 +62,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <h1>Melee Attack</h1>
+            <div class="col-sm">
+                <button type="button" class="btn btn-lg btn-block btn-dark">Melee Attack</button>
             </div>
             <div class="col">
-                <h1>Ranged Attack</h1>
+                <button type="button" class="btn btn-lg btn-block btn-dark">Ranged Attack</button>
             </div>
             <div class="col">
-                <h1>Magic Attack</h1>
+                <button type="button" class="btn btn-lg btn-block btn-dark">Magic Attack</button>
             </div>
             <div class="col">
-                <h1>Potion</h1>
+                <button type="button" class="btn btn-lg btn-block btn-dark">Potion</button>
             </div>
         </div>
     </div>
