@@ -1,0 +1,42 @@
+[debug] [2018-08-25T01:54:41.124Z] ----------------------------------------------------------------------
+[debug] [2018-08-25T01:54:41.126Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2018-08-25T01:54:41.126Z] CLI Version:   4.1.2
+[debug] [2018-08-25T01:54:41.126Z] Platform:      darwin
+[debug] [2018-08-25T01:54:41.126Z] Node Version:  v8.11.3
+[debug] [2018-08-25T01:54:41.126Z] Time:          Fri Aug 24 2018 20:54:41 GMT-0500 (CDT)
+[debug] [2018-08-25T01:54:41.126Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-25T01:54:41.138Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2018-08-25T01:54:41.138Z] > authorizing via signed-in user
+[info] 
+     🔥🔥🔥🔥🔥🔥🔥🔥 🔥🔥🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥     🔥🔥🔥     🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥
+     🔥🔥        🔥🔥  🔥🔥     🔥🔥 🔥🔥       🔥🔥     🔥🔥  🔥🔥   🔥🔥  🔥🔥       🔥🔥
+     🔥🔥🔥🔥🔥🔥    🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥   🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥
+     🔥🔥        🔥🔥  🔥🔥    🔥🔥  🔥🔥       🔥🔥     🔥🔥 🔥🔥     🔥🔥       🔥🔥 🔥🔥
+     🔥🔥       🔥🔥🔥🔥 🔥🔥     🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥     🔥🔥  🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/shmuelgross/Documents/bootcamp/project-1
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[debug] [2018-08-25T01:55:01.347Z] TypeError: Cannot read property 'setRawMode' of null
+    at ReadStream.setRawMode (tty.js:59:16)
+    at Interface._setRawMode (readline.js:241:16)
+    at Interface.close (readline.js:365:10)
+    at ReadStream.ontermend (readline.js:154:10)
+    at emitNone (events.js:111:20)
+    at ReadStream.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-08-25T01:55:01.349Z] Error: write EIO
+    at _errnoException (util.js:992:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:864:14)
+[error] 
+[error] Error: An unexpected error has occurred.
