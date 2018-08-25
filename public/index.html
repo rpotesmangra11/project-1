@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <title>Project 1</title>
 </head>
-<style>
-    div {
-        border-color:blue;
-        border: solid 1px;
-    }
-    #game-display {
-        height: 500px;
-    }
-</style>
+
 <body>
     <!-- jquery cdn -->
-        <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 
     <div class="container">
+
+        <!-- Game Title Banner -->
+        <div class="jumbotron">
+            <h1 class="display-4">Face Wars</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+                featured content or information.</p>
+            <hr class="my-4">
+        </div>
+
+        <!-- Game Content Area -->
         <div class="row">
-            <div class="col-2" id="user-stats">
-                <h1>Stats</h1>
-                <h1>Stats</h1>
-                <h1>Stats</h1>
-                <h1>Stats</h1>
-                <h1>Stats</h1>
-            </div>
-            <div class="col-8" id="game-display">
-                <h1>GameGameGameGameGameGameGame</h1>
-            </div>
-            <div class="col-2" id="opponent-stats">
-                <h1>Stats</h1>
-                <h1>Stats</h1>
-                <h1>Stats</h1>
-                <h1>Stats</h1>
-                <h1>Stats</h1>
+            <div class="col-12" id="game-display">
+                <h1 class="text-center">Game Content Area</h1>
             </div>
         </div>
+
+        <!-- Player 1 -->
         <div class="row">
-            <div class="col">
-                <h1>Melee Attack</h1>
+            <div class="col profile-img"><img class="rounded float-right" src="https://placeimg.com/240/240/people"></div>
+            <div class="col char-stats">
+                <div class="card text-white bg-dark mb-3 rounded" style="max-width: 18rem;">
+                    <div class="card-header">Hero Face 2</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Character Stats</h5>
+                        <p class="card-text">
+                            Attack:
+                        </p>
+                        <p class="card-text">
+                            Defense:
+                        </p>
+                        <p class="card-text">
+                            Potions:
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <h1>Ranged Attack</h1>
-            </div>
-            <div class="col">
-                <h1>Magic Attack</h1>
-            </div>
-            <div class="col">
-                <h1>Potion</h1>
+
+            <!-- Player 2 -->
+            <div class="col profile-img"><img class="rounded float-right" src="https://placeimg.com/240/240/people"></div>
+            <div class="col char-stats">
+                <div class="card text-white bg-dark mb-3 rounded" style="max-width: 18rem;">
+                    <div class="card-header">Hero Face 2</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Character Stats</h5>
+                        <p class="card-text">
+                            Attack:
+                        </p>
+                        <p class="card-text">
+                            Defense:
+                        </p>
+                        <p class="card-text">
+                            Potions:
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+
+
+        <footer class="text-center">
+            <small> Copyright &copy; Unemployed Voodoo Strikers LLC. 2018</small>
+        </footer>
     </div>
 
 
-    
- 
     <script src="app.js"></script>
 </body>
+
 </html>
