@@ -10,7 +10,17 @@ $(document).ready(() => {
     };
     firebase.initializeApp(config);
 
+    //stats 
+    var att;
+    var def;
+    var health;
 
+    //base stats
+    var baseatt = 10;
+    var basedef = 10;
+    var basehealth = 200;
+
+    //Select image file
     $(function () {
         $(":file").change(function () {
             if (this.files && this.files[0]) {
@@ -20,10 +30,16 @@ $(document).ready(() => {
             }
         });
     });
-
+    //Display image file
     function imageIsLoaded(e) {
         var imgdataURL = e.target.result;
         $('#user1-face').attr('src', imgdataURL);
+        var hpUp = 0;
+        var hpDown = 0;
+        var attUp = 0;
+        var attDown = 0;
+        var defUp = 0;
+        var defDown = 0;
         console.log(imgdataURL);
         processImage()
 
@@ -83,7 +99,68 @@ $(document).ready(() => {
 
                 .done(function (data) {
                     // Show formatted JSON on webpage.
-                    console.log(JSON.stringify(data, null, 2));
+                    var emotionData = data[0].faceAttributes.emotion;
+                    console.log(emotionData);
+
+                    //stat boosts
+                    if (emotionData.anger > 0) {
+                        attUp += Math.floor(Math.random() * (10 - 5)) + 5;
+                        defDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                        hpUp += Math.floor(Math.random() * (10 - 5)) + 5;
+                    };
+                    if (emotionData.contempt > 0) {
+                        defDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                        hpDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                    };
+                    if (emotionData.disgust > 0) {
+                        attDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                        defDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                        hpDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                    };
+                    if (emotionData.fear > 0) {
+                        attDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                        defDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                        hpDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                    };
+                    if (emotionData.happiness > 0) {
+                        attDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                        defUp += Math.floor(Math.random() * (10 - 5)) + 5;
+                        hpUp += Math.floor(Math.random() * (10 - 5)) + 5;
+                    };
+                    if (emotionData.neutral > 0) {
+                        attUp += Math.floor(Math.random() * (100 - 20)) + 20;
+                        defUp += Math.floor(Math.random() * (100 - 20)) + 20;
+                        hpUp += Math.floor(Math.random() * (100 - 20)) + 20;
+                    };
+                    if (emotionData.sadness > 0) {
+                        attUp += Math.floor(Math.random() * (30 - 10)) + 10;
+                        defUp += Math.floor(Math.random() * (30 - 10)) + 10;
+                        hpUp += Math.floor(Math.random() * (30 - 10)) + 10;
+                    };
+                    if (emotionData.surprise > 0) {
+                        attDown += Math.floor(Math.random() * (10 - 5)) + 5;
+                        defUp += Math.floor(Math.random() * (10 - 5)) + 5;
+                        hpUp += Math.floor(Math.random() * (10 - 5)) + 5;
+                    };
+
+                    //new stats
+                    att = baseatt + attUp - attDown;
+                    def = basedef + defUp - defDown;
+                    health = basehealth + hpUp - hpDown;
+
+                    //display stats
+                    var hpdiv = $("<h3>");
+                    hpdiv.text("Health: " + health);
+                    $("#user-stats").append(hpdiv);
+
+                    var attdiv = $("<h3>");
+                    attdiv.text("Attack: " + att);
+                    $("#user-stats").append(attdiv);
+
+                    var defdiv = $("<h3>");
+                    defdiv.text("Defence: " + def);
+                    $("#user-stats").append(defdiv);
+
                 })
 
                 .fail(function (jqXHR, textStatus, errorThrown) {
