@@ -36,22 +36,22 @@
         <!-- Attack Buttons -->
         <div class="row atkButtons">
             <div class="col-sm">
-                <button type="button" class="btn btn-lg btn-block btn-success">Melee Attack</button>
+                <button type="button" class="btn btn-lg btn-block btn-dark">Melee Attack</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-lg btn-block btn-primary">Heal</button>
+                <button type="button" class="btn btn-lg btn-block btn-danger">Heal</button>
             </div>
             <div class="col-sm">
-                <button type="button" class="btn btn-lg btn-block btn-success">Melee Attack</button>
+                <button type="button" class="btn btn-lg btn-block btn-dark">Melee Attack</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-lg btn-block btn-primary">Heal</button>
+                <button type="button" class="btn btn-lg btn-block btn-danger">Heal</button>
             </div>
         </div>
 
         <!-- Player 1 -->
         <div class="row">
-            <div class="col profile-img"><img class="rounded float-right" src="https://placeimg.com/240/240/people"></div>
+            <div class="col profile-img"><img id="user1-face" class="rounded float-right" src="https://placeimg.com/240/240/people"></div>
             <div class="col char-stats">
                 <div class="card text-white bg-dark mb-3 rounded" style="max-width: 18rem;">
                     <div class="card-header">Hero Face 1</div>
@@ -69,6 +69,7 @@
                     </div>
                 </div>
             </div>
+        
 
             <!-- Player 2 -->
             <div class="col profile-img"><img class="rounded float-right" src="https://placeimg.com/240/240/people"></div>
@@ -90,7 +91,11 @@
                 </div>
             </div>
         </div>
-
+         <div class="row">
+            <form class="btn btn-light">
+                <input class="btn btn-light" type="file" id="file-input">
+            </form>
+        </div>
 
         <footer class="text-center">
             <small> Copyright &copy; Unemployed Voodoo Strikers LLC. 2018</small>

@@ -10,12 +10,9 @@ body {
   background-color: #e9ecef;
   min-height: 400px;
   margin-bottom: 30px;
-
   background-image: url(https://media.giphy.com/media/ZohjjXBFXojxC/source.gif);
-
   /* Full height */
   height: 100%;
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -25,7 +22,6 @@ body {
 .jumbotron {
   padding: 8px 15px;
   text-align: center;
-
 }
 
 .atkButtons {
@@ -33,21 +29,24 @@ body {
 }
 
 .bgJumboImg {
-    background-image: url(../images/banner-img.png);
-
-    /* Full height */
-    /* height: 50%;
+  background-image: url(../images/banner-img.png);
+  /* Full height */
+  /* height: 50%;
     width: 50%; */
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .profile-img {
   padding-right: 0px;
   margin-right: 0px;
+}
+
+#user1-face {
+  width: 240px;
+  height: 240px;
 }
 
 .char-stats {
@@ -59,13 +58,9 @@ body {
   height: 240px;
 }
 
-=======
-}
-
 .jumbotron {
   padding: 8px 15px;
   text-align: center;
-
 }
 
 .atkButtons {
@@ -73,16 +68,14 @@ body {
 }
 
 .bgJumboImg {
-    background-image: url(../images/banner-img.png);
-
-    /* Full height */
-    /* height: 50%;
+  background-image: url(../images/banner-img.png);
+  /* Full height */
+  /* height: 50%;
     width: 50%; */
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .profile-img {
@@ -102,6 +95,12 @@ body {
 p {
   margin: 0;
   padding: 0;
+}
+.btn-dark:hover {
+color: cyan;
+}
+.btn-danger:hover {
+  color: chartreuse;
 }
 
 /* 
