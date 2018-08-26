@@ -1,32 +1,36 @@
 body {
   background-image: url(../images/darkness.png);
+  font-family: 'Press Start 2p', cursive;
 }
 
 .container {
   background-image: url(../images/darkness.png);
 }
 
-#game-display {
-  /* background-color: #e9ecef; */
+/* #game-display {
+  background-color: #e9ecef;
   min-height: 400px;
   margin-bottom: 30px;
-  /* background-image: url(https://media.giphy.com/media/ZohjjXBFXojxC/source.gif); */
-  /* Full height */
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.gameGif {
+  border: 1px paleturquoise solid;
   height: 400px;
   width: 100%;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.gameGif {
-  height: 400px;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   min-height: 400px;
   margin-bottom: 30px;
+}
+.upload {
+  font-family: 'Courier New', Courier, monospace;
 }
 .jumbotron {
   padding: 8px 15px;
@@ -37,8 +41,8 @@ body {
   margin-bottom: 30px;
 }
 
-.bgJumboImg {
-  background-image: url(../images/banner-img.png);
+.jumbotron {
+  /* background-image: url(../images/banner-img.png); */
   /* Full height */
   /* height: 50%;
     width: 50%; */
@@ -46,6 +50,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(93, 49, 97);
+  color:rgb(108, 245, 108);
+  border: 2px cyan solid;
+
 }
 
 .profile-img {
@@ -105,11 +113,19 @@ p {
   margin: 0;
   padding: 0;
 }
+
 .btn-dark:hover {
-color: cyan;
+  color: cyan;
 }
+
 .btn-danger:hover {
   color: chartreuse;
+}
+footer {
+  background-color: indigo;
+  color: lawngreen;
+  width: 100%;
+  
 }
 
 /* 
