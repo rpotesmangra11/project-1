@@ -10,12 +10,28 @@ $(document).ready(() => {
     };
     firebase.initializeApp(config);
 
-    const database = firebase.database();
-    
+    const ref = firebase.database().ref();
+    ref.on("value", (snapshot) => {
+        console.log(snapshot.val())
+    }, (error) => {
+        console.log(error.code)
+    });
+
+    function writeUserData(att, def, potions, playerNum, imageUrl) {
+        firebase.database().ref('Characters/' + playerNum).set({
+            Attack: att,
+            Defense: def,
+            Image: imageUrl,
+            Potions: potions
+        });
+    }
+    writeUserData(20, 20, 300, 40, 12)
+
     //stats 
     var att;
     var def;
     var health;
+
 
     //base stats
     var baseatt = 10;
@@ -183,22 +199,22 @@ $(document).ready(() => {
         };
 
     };
-        var queryURL = "https://api.giphy.com/v1/gifs/ZohjjXBFXojxC?api_key=XKo8op1ySUbCJChDx2u1pqIJ4EMOHQPC";
-        
-        // creates ajax call
-        $.ajax({
-                url: queryURL,
-                method: "GET"
-            })
+    var queryURL = "https://api.giphy.com/v1/gifs/ZohjjXBFXojxC?api_key=XKo8op1ySUbCJChDx2u1pqIJ4EMOHQPC";
 
-            .then(function (response) {
-                console.log(response);
-                // save results as a variable
-                var results = response.data;
-                var gameGif = $('<img class=gameGif>');
-                    gameGif.attr('src', results.images.original.url);
-                $("#game-display").prepend(gameGif);
+    // creates ajax call
+    $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
 
-            });
+        .then(function (response) {
+            console.log(response);
+            // save results as a variable
+            var results = response.data;
+            var gameGif = $('<img class=gameGif>');
+            gameGif.attr('src', results.images.original.url);
+            $("#game-display").prepend(gameGif);
+
+        });
 
 });
