@@ -10,6 +10,8 @@ $(document).ready(() => {
     };
     firebase.initializeApp(config);
 
+    const database = firebase.database();
+    
     //stats 
     var att;
     var def;
@@ -53,8 +55,7 @@ $(document).ready(() => {
             var params = {
                 "returnFaceId": "true",
                 "returnFaceLandmarks": "false",
-                "returnFaceAttributes":
-                    "age,gender,headPose,smile,facialHair,glasses,emotion," +
+                "returnFaceAttributes": "age,gender,headPose,smile,facialHair,glasses,emotion," +
                     "hair,makeup,occlusion,accessories,blur,exposure,noise"
             };
 
@@ -65,7 +66,9 @@ $(document).ready(() => {
                     var parts = dataURL.split(',');
                     var contentType = parts[0].split(':')[1];
                     var raw = decodeURIComponent(parts[1]);
-                    return new Blob([raw], { type: contentType });
+                    return new Blob([raw], {
+                        type: contentType
+                    });
                 }
                 var parts = dataURL.split(BASE64_MARKER);
                 var contentType = parts[0].split(':')[1];
@@ -78,24 +81,26 @@ $(document).ready(() => {
                     uInt8Array[i] = raw.charCodeAt(i);
                 }
 
-                return new Blob([uInt8Array], { type: contentType });
+                return new Blob([uInt8Array], {
+                    type: contentType
+                });
             }
             console.log(makeblob(imgdataURL));
 
             // Perform the REST API call.
             $.ajax({
-                url: uriBase + "?" + $.param(params),
+                    url: uriBase + "?" + $.param(params),
 
-                // Request headers.
-                beforeSend: function (xhrObj) {
-                    xhrObj.setRequestHeader("Content-Type", "application/octet-stream");
-                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
-                },
+                    // Request headers.
+                    beforeSend: function (xhrObj) {
+                        xhrObj.setRequestHeader("Content-Type", "application/octet-stream");
+                        xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+                    },
 
-                type: "POST",
-                processData: false,
-                data: makeblob(imgdataURL),
-            })
+                    type: "POST",
+                    processData: false,
+                    data: makeblob(imgdataURL),
+                })
 
                 .done(function (data) {
                     // Show formatted JSON on webpage.
@@ -169,12 +174,31 @@ $(document).ready(() => {
                         "Error. " : errorThrown + " (" + jqXHR.status + "): ";
                     errorString += (jqXHR.responseText === "") ?
                         "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
-                            jQuery.parseJSON(jqXHR.responseText).message :
-                            jQuery.parseJSON(jqXHR.responseText).error.message;
+                        jQuery.parseJSON(jqXHR.responseText).message :
+                        jQuery.parseJSON(jqXHR.responseText).error.message;
                     alert(errorString);
                 });
 
-                
+
         };
+
     };
+        var queryURL = "https://api.giphy.com/v1/gifs/ZohjjXBFXojxC?api_key=XKo8op1ySUbCJChDx2u1pqIJ4EMOHQPC";
+        
+        // creates ajax call
+        $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+
+            .then(function (response) {
+                console.log(response);
+                // save results as a variable
+                var results = response.data;
+                var gameGif = $('<img class=gameGif>');
+                    gameGif.attr('src', results.images.original.url);
+                $("#game-display").prepend(gameGif);
+
+            });
+
 });
