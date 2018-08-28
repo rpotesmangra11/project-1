@@ -37,16 +37,10 @@
         <!-- Attack Buttons -->
         <div class="row atkButtons">
             <div class="col-sm">
-                <button type="button" class="btn btn-lg btn-block btn-dark">Melee Attack</button>
+                <button type="button" class="btn btn-lg btn-block btn-dark" id="attack-btn">Melee Attack</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-lg btn-block btn-danger">Heal</button>
-            </div>
-            <div class="col-sm">
-                <button type="button" class="btn btn-lg btn-block btn-dark">Melee Attack</button>
-            </div>
-            <div class="col">
-                <button type="button" class="btn btn-lg btn-block btn-danger">Heal</button>
+                <button type="button" class="btn btn-lg btn-block btn-danger" id="genOpp">Generate Opponent</button>
             </div>
         </div>
 
@@ -60,36 +54,24 @@
                     <div class="card-header">Hero Face 1</div>
                     <div class="card-body">
                         <h5 class="card-title">Character Stats</h5>
-                        <p class="card-text">
-                            Attack:
-                        </p>
-                        <p class="card-text">
-                            Defense:
-                        </p>
-                        <p class="card-text">
-                            Potions:
-                        </p>
+                        <p class="card-text" id="health"></p>
+                        <p class="card-text" id="attack"></p>                       
+                        <p class="card-text" id="defense"></p>
                     </div>
                 </div>
             </div>
             <!-- Player 2 -->
             <div class="col profile-img">
-                <img class="rounded float-right" src="https://placeimg.com/240/240/people">
+                <img id="user2-face" class="rounded float-right" src="https://placeimg.com/240/240/people">
             </div>
             <div class="col char-stats">
                 <div class="card text-white bg-dark mb-3 rounded" style="max-width: 18rem;">
                     <div class="card-header">Hero Face 2</div>
                     <div class="card-body">
                         <h5 class="card-title">Character Stats</h5>
-                        <p class="card-text">
-                            Attack:
-                        </p>
-                        <p class="card-text">
-                            Defense:
-                        </p>
-                        <p class="card-text">
-                            Potions:
-                        </p>
+                        <p class="card-text" id="health2"></p>
+                        <p class="card-text" id="attack2"></p>                       
+                        <p class="card-text" id="defense2"></p>
                     </div>
                 </div>
             </div>
