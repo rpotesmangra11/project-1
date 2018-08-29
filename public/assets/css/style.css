@@ -61,7 +61,7 @@ body {
   margin-right: 0px;
 }
 
-#user1-face {
+#user1-face, #user2-face {
   width: 240px;
   height: 240px;
 }
